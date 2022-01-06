@@ -1,4 +1,4 @@
-# Line-up optimization
+# Line-up Optimization
 
 The aim of this demo, developed by Aitzol Iturrospe (www.spdtek.com), is to optimize the initial line-up of Liverpool FC. The goal is to select players
 maximizing the sum of their ratings. Two different cases are considered: 
@@ -38,7 +38,9 @@ Maximize H<sub>Z</sub>=6.81x<sub>0</sub>+5.86x<sub>1</sub>+6.62x<sub>2</sub>+⋯
 
 To run the demo, type:
 
+```bash
 python lineup_optim.py
+```
 
 The user will be prompted for the formation to be optimized: 1 (default) for a 4-3-3 formation or 2 for a 4-3-2-1 formation.
 After running the optimization, output will be printed to the command line that showing the optimized line-up for the choosen formation and total rating. 
@@ -58,12 +60,16 @@ x<sub>37</sub> | Salah | FWR | 7.42
 x<sub>39</sub> | Firminho | FW | 6.99 
  |  |  | Max H<sub>Z</sub> | 82.67
 
-In addition, the list of constraints will be visualized showing wether if they are fulfilled (true) o not (false).
+In addition, the list of constraints will be visualized showing whether they are fulfilled (true)
+or not (false).
 
 
 ## Code Overview
 
-Equality constraints <img src="image027.png" style="vertical-align: -100px; margin: 0;" width=12% height=12%> are standardly formulated in BQMs as minimizing <img src="image028.png" style="vertical-align: -100px; margin: 0;" width=14% height=14%> functions. Therefore, the constraints are formulated following the quadratic formulation and they are shown in tables 1, 2 and 3.
+Equality constraints <img src="equation0.png" style="vertical-align: -100px; margin: 0;" width=12% height=12%> are 
+standardly formulated in BQMs as minimizing <img src="equation1.png" style="vertical-align: -100px; margin: 0;" width=14% height=14%> 
+functions. Therefore, the constraints are formulated following the quadratic formulation and they are 
+shown in tables 1, 2 and 3.
 
 Table.1 - General constraints
 

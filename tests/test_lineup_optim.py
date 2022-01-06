@@ -13,9 +13,9 @@
 # limitations under the License.
 
 import os
-import subprocess
 import sys
 import unittest
+from subprocess import Popen, PIPE ,STDOUT
 
 # /path/to/demos/Line-up-optimization/tests/test_lineup_optim.py
 project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +25,10 @@ class TestDemo(unittest.TestCase):
     @unittest.skipIf(os.getenv('SKIP_INT_TESTS'), "Skipping integration test.")
     def test_lineup_optim(self):
         demo_file = os.path.join(project_dir, 'lineup_optim.py')
-        output = subprocess.check_output([sys.executable, demo_file])
+        p = Popen([sys.executable, demo_file],
+                  stdout=PIPE, stdin=PIPE, stderr=STDOUT)
+        p.stdin.write(b'1')
+        output = p.communicate()[0]
         output = str(output).upper()
         if os.getenv('DEBUG_OUTPUT'):
             print("Example output \n" + output)
@@ -34,7 +37,3 @@ class TestDemo(unittest.TestCase):
             self.assertNotIn("ERROR", output)
         with self.subTest(msg="Verify if warning string contains in output \n"):
             self.assertNotIn("WARNING", output)
-
-if __name__ == '__main__':
-    unittest.main()
-

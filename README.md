@@ -66,7 +66,10 @@ or not (false).
 
 ## Code Overview
 
-Equality constraints <img src="image027.png" style="vertical-align: -100px; margin: 0;" width=12% height=12%> are standardly formulated in BQMs as minimizing <img src="image028.png" style="vertical-align: -100px; margin: 0;" width=14% height=14%> functions. Therefore, the constraints are formulated following the quadratic formulation and they are shown in tables 1, 2 and 3.
+Equality constraints <img src="equation0.png" style="vertical-align: -100px; margin: 0;" width=12% height=12%> are 
+standardly formulated in BQMs as minimizing <img src="equation1.png" style="vertical-align: -100px; margin: 0;" width=14% height=14%> 
+functions. Therefore, the constraints are formulated following the quadratic formulation and they are 
+shown in tables 1, 2 and 3.
 
 Table.1 - General constraints
 

@@ -1,6 +1,6 @@
 # Line-up Optimization
 
-**NOTICE**: This example uses a legacy version of Ocean.
+**NOTICE**: **This example requires a legacy version of Ocean.**
 
 The aim of this demo, developed by Aitzol Iturrospe (www.spdtek.com), is to optimize the initial line-up of Liverpool FC. The goal is to select players
 maximizing the sum of their ratings. Two different cases are considered: 

@@ -20,6 +20,7 @@ import pandas as pd
 from pyqubo import Constraint, Array
 import neal
 from dwave.system import LeapHybridSampler
+from dwave.samplers import SimulatedAnnealingSampler
 
 
 # Read players rating from CSV
@@ -119,14 +120,14 @@ qubo, offset = model.to_qubo()
 bqm = model.to_bqm()
 
 # Uncomment to solve problem by simulation
-# sa = neal.SimulatedAnnealingSampler()
-# sampleset = sa.sample(bqm, num_reads=10000)
+sa = SimulatedAnnealingSampler()
+sampleset = sa.sample(bqm, num_reads=10000)
 
 # Solve problem with QPU
-sampler = LeapHybridSampler()
-sampleset = sampler.sample(bqm,
-                            time_limit=90,
-                            label="SPDtek - Soccer line-up optimization")
+# sampler = LeapHybridSampler()
+# sampleset = sampler.sample(bqm,
+#                             time_limit=90,
+#                             label="SPDtek - Soccer line-up optimization")
 
 
 # Decode samples and select the best one

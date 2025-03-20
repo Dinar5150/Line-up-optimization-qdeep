@@ -1,3 +1,7 @@
+# Important note
+
+This repository is a fork of [D-Wave's original Line-up-optimization](https://github.com/dwave-examples/Line-up-optimization). The contributors to this fork do not claim ownership or authorship of the original codebase. All credit for the original work belongs to D-Wave Systems and its respective contributors.
+
 # Line-up Optimization
 
 **NOTICE**: **This example requires a legacy version of Ocean.**
